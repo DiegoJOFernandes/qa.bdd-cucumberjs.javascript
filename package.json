@@ -1,0 +1,15 @@
+{
+  "name": "qa.bdd-cucumberjs.javascript",
+  "version": "1.0.0",
+  "description": "**Ao clonar o repositório instale as dependências:**\r > npm i",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cucumber-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.1"
+  }
+}
