@@ -93,10 +93,20 @@ O BDD deve ser usado desde o início do ciclo de desenvolvimento, alinhando a eq
 3. **Pipeline de CI com GitHub Actions**:
    - Garantia de execução contínua dos testes a cada mudança no código.
 
----
+--- 
 
-**Autor:** Diego  
 **Tecnologias Utilizadas:** JavaScript, Cucumber.js, GitHub Actions  
 **Referências:** 
 ["BDD não é automação de teste" - Elias Nogueira](https://www.youtube.com/watch?v=O_FiotmX0R4)
 ["BDD Uso e Filosofia" - BeHave](https://behave.readthedocs.io/en/stable/philosophy.html)
+
+## **Autor**
+
+- Nome: Diego Fernandes
+- Contato: https://www.linkedin.com/in/diego-fernandes-it
+
+---
+
+## **Licença**
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
