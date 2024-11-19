@@ -1,17 +1,32 @@
-# Case QA BDD CucumberJS Javascript
+# **Case QA BDD CucumberJS Javascript**
 
-Este projeto utiliza Cucumber.js para validar a maioridade de uma pessoa, conforme os requisitos fornecidos.
+Este projeto utiliza o **Cucumber.js** para validar a maioridade de uma pessoa, implementando o conceito de **Behavior-Driven Development (BDD)** para garantir que as funcionalidades atendam às expectativas do negócio.
 
-## Como rodar o projeto
+---
 
-**Ao clonar o repositório instale as dependências:**
-> npm i
+## **Como rodar o projeto**
+```bash
+git clone https://github.com/seu-usuario/qa.bdd-cucumberjs.javascript.git
+cd qa.bdd-cucumberjs.javascript
+```
 
-**Para executar os testes:**
-> npm test
+### **Instalação**
+Ao clonar o repositório, instale as dependências necessárias:
+```bash
+npm i
+```
 
-#### Estrutura do projeto:
+### **Executar os testes**
+Execute os testes automatizados usando:
+```bash
+npm test
+```
 
+---
+
+## **Estrutura do projeto**
+
+```plaintext
 qa.bdd-cucumberjs.javascript/
 │
 ├── .github/
@@ -27,30 +42,61 @@ qa.bdd-cucumberjs.javascript/
 ├── pessoa.js                    # Implementação da classe Pessoa
 ├── package.json                 # Dependências do projeto
 └── README.md                    # Documentação do projeto
+```
 
+---
 
+## **Perguntas e Respostas**
 
-#### Perguntas
+### **Com base no vídeo "BDD não é automação de teste" do Elias Nogueira, o que é BDD e como aplicá-lo corretamente no ciclo de desenvolvimento de software?**
 
-Com base no vídeo BDD não é automação de teste de uma das grandes referências da nossa área de qualidade 'Elias Nogueira', explique com suas palavras o que é o BDD e como aplica-ló da maneira correta no ciclo de desenvolvimento de software?
-https://www.youtube.com/watch?v=O_FiotmX0R4
+#### **O que é BDD?**
+BDD (Behavior-Driven Development) é uma prática de desenvolvimento que coloca o foco no **comportamento esperado do sistema**, promovendo a colaboração entre todos os membros da equipe, incluindo desenvolvedores, testers e stakeholders.
 
-Resposta 
+- **Colaboração e Alinhamento**: O BDD fomenta a comunicação entre as partes interessadas. Times discutem e definem os comportamentos esperados para criar um entendimento compartilhado sobre o que o software deve fazer.
+- **Linguagem Comum**: O uso de linguagens claras, como o Gherkin, no formato “Dado-Quando-Então” (Given-When-Then), permite que tanto pessoas técnicas quanto não técnicas compreendam as especificações.
+- **Foco no Comportamento**: BDD descreve funcionalidades com base no **comportamento esperado**, alinhando o desenvolvimento às necessidades do negócio.
 
-Colaboração e Alinhamento: BDD fomenta a comunicação eficaz entre todas as partes envolvidas no projeto. Em vez de trabalhar isoladamente, os times discutem e definem os comportamentos esperados do sistema, criando um entendimento compartilhado sobre o que o software deve fazer.
-Linguagem Comum: Os exemplos e cenários de comportamento são escritos em uma linguagem clara e compreensível, como a estrutura Gherkin, que segue o formato “Dado-Quando-Então”. Isso garante que tanto as pessoas técnicas quanto as não técnicas possam entender as especificações.
-Foco no Comportamento: O objetivo é descrever as funcionalidades do sistema com base nos comportamentos esperados, em vez de detalhar a implementação técnica. Isso ajuda a alinhar o desenvolvimento com os resultados desejados pelo negócio.
+#### **Estrutura do Gherkin**
+O formato “Dado-Quando-Então” organiza os cenários de comportamento:
+- **Dado (Given)**: Define o estado inicial ou contexto necessário.
+- **Quando (When)**: Descreve a ação que o usuário realiza ou um evento que ocorre.
+- **Então (Then)**: Explica o resultado ou comportamento esperado.
 
-Dado (Given): Define o estado inicial ou contexto necessário.
-Quando (When): Descreve a ação que o usuário realiza ou um evento que ocorre.
-Então (Then): Explica o resultado ou comportamento esperado.
+#### **Como Aplicar o BDD Corretamente**
+1. **Criar Histórias de Usuário**:
+   - Descreva o que o usuário deseja alcançar e defina critérios de aceitação claros.
+   - Exemplo: "Como um cliente, eu quero acessar minha conta para gerenciar meus dados."
+2. **Desenvolver Cenários de Comportamento**:
+   - Baseado nos critérios de aceitação, escreva cenários no formato Gherkin:
+     ```gherkin
+     Dado que o usuário está na página de login,
+     Quando ele insere credenciais válidas,
+     Então ele deve ser redirecionado para sua conta.
+     ```
+3. **Automatizar Testes Baseados nos Cenários**:
+   - Utilize ferramentas como Cucumber para automatizar os testes, garantindo que o comportamento do sistema atenda aos critérios definidos.
+4. **Integração Contínua (CI)**:
+   - Configure pipelines (como GitHub Actions) para executar os testes regularmente, assegurando que as mudanças no código não violem os requisitos comportamentais.
 
-Como Aplicar o BDD Corretamente
-Criar Histórias de Usuário e Critérios de Aceitação: Comece escrevendo histórias que descrevam o que o usuário quer alcançar. Cada história deve ter critérios claros que definam quando a funcionalidade está completa.
-Desenvolver Cenários de Comportamento: Baseie-se nos critérios de aceitação para escrever cenários usando o formato Given-When-Then. Por exemplo: “Dado que o usuário está na página de login, quando ele insere suas credenciais corretas, então ele deve ser redirecionado para a sua conta.”
-Automatizar Testes Baseados em Cenários: Esses cenários podem ser usados para escrever testes automatizados que validam o comportamento do sistema. Ferramentas como Cucumber, SpecFlow ou Behave são comuns nesse processo.
-Integração Contínua: Use práticas de integração e entrega contínuas para executar os testes BDD regularmente, garantindo que o software continue atendendo às expectativas à medida que é desenvolvido e atualizado.
+#### **Explicação**
+O BDD deve ser usado desde o início do ciclo de desenvolvimento, alinhando a equipe às expectativas de negócio e promovendo uma comunicação eficaz. Cenários escritos em Gherkin garantem clareza e facilitam a validação do comportamento esperado do sistema.
 
-#### Explicação
+---
 
-O BDD (Behavior-Driven Development) deve ser usado como uma prática para garantir que todos os membros da equipe, incluindo desenvolvedores, testers e stakeholders, estejam alinhados sobre o comportamento esperado do sistema. Ele deve ser introduzido desde a fase de requisitos, com as histórias de usuário definidas em formato Gherkin, o que facilita a compreensão e validação do comportamento esperado do software.
+## **Práticas Adotadas no Projeto**
+
+1. **Cenários baseados em critérios de aceitação**:
+   - Os cenários foram escritos no formato Gherkin, promovendo uma linguagem clara e compartilhada.
+2. **Automação de testes com Cucumber.js**:
+   - Cada cenário foi implementado como teste automatizado para validar o comportamento esperado.
+3. **Pipeline de CI com GitHub Actions**:
+   - Garantia de execução contínua dos testes a cada mudança no código.
+
+---
+
+**Autor:** Diego  
+**Tecnologias Utilizadas:** JavaScript, Cucumber.js, GitHub Actions  
+**Referências:** 
+["BDD não é automação de teste" - Elias Nogueira](https://www.youtube.com/watch?v=O_FiotmX0R4)
+["BDD Uso e Filosofia" - BeHave](https://behave.readthedocs.io/en/stable/philosophy.html)
